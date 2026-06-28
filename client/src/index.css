@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Global Font */
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hide Scrollbar */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE & Edge (Legacy) */
+body {
+  -ms-overflow-style: none;
+}
