@@ -16,8 +16,9 @@ import { auth, provider } from '../utils/firebase';
 import axios from 'axios'
 import { ServerUrl } from '../App';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
-function Login() {
+function Login({setUser}) {
 
   const features = [
     {
@@ -125,8 +126,11 @@ function Login() {
         name:displayName,
         email, 
       },{withCredentials:true})
+      setUser(res.data)
+      toast.success("Login Successfully")
       navigate("/")
     } catch (error) {
+      toast.error("Login failed.....")
       console.log(error)
     }
   }

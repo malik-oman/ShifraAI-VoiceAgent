@@ -4,6 +4,7 @@ import connectDB from './config/connectDB.js'
 import authRouter from './routes/auth.route.js'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+import userRouter from './routes/user.route.js'
 dotenv.config()
 
 // ===================================================
@@ -20,6 +21,7 @@ app.get("/",(req,res)=>{
 })
 // API======================================================
 app.use("/api/auth", authRouter)
+app.use("/api/user", userRouter)
 
 
 // =====================PORT ====== SERVER STARTING POINT
